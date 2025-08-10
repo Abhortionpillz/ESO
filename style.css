@@ -1,0 +1,175 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+}
+/* header nav and logo section */
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #1f2937;
+    color: antiquewhite;
+   
+}
+
+/*hero section */
+.header-logo{
+    margin-left: 30px;
+    width: 40%;
+    
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+}
+.nav a {
+    text-decoration: none;
+    margin-top: 30px;
+    font-weight: 300px;
+    color: wheat;
+}
+.hero-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1f2937;
+    padding: 50px;
+    align-items: center;
+    
+    
+}
+
+.hero {
+    width: 40%;
+    height: 40%; 
+    color: aliceblue;
+    
+    
+}
+
+.hero h2 {
+    font-weight: 900;
+    font-size: 48px;
+}
+.hero1 {
+    width: 50%;
+    
+}
+.hero1 input {
+    height: 150px;
+    width: 300px;
+    color: gray;
+}
+.hero-section button{
+    background-color: #3882f6;
+    align-self: center;
+    margin-top: 3px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+/* */
+
+main{
+    margin: 0px;
+    padding: 0px;
+    
+
+}
+
+/* random information page  */
+.main1 {
+    display: flex;
+    flex-direction:column;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+
+}
+
+
+.img{
+    display: flex;
+    flex-direction:row;
+    height: 80%;
+    margin-bottom: 40px;
+    justify-content:space-between;
+    
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #3882f6;
+    border-radius: 20px;
+   
+}
+/* quote page */
+.quote {
+    background-color: #e5e7eb;
+    height: 200px;
+    padding-top:30px ;
+    width:100%;
+    align-items: center;
+    padding-left: 40px;
+}
+    
+.quote p {
+    width: 50%;
+    font-style: italic;
+    margin-left: 200px;
+    
+}
+
+.quote b {
+    width: px;
+    margin-left: 500px;
+}
+
+/* call to action page*/
+.main3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    
+}
+.action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #3882f6;
+    width: 600px;
+    border-radius: 5px;
+    margin: 20px;
+
+}
+.action button{
+    background-color: #3882f6;
+    border: solid white;
+    align-self: center;
+    margin-top: 35px;
+    width: 80px;
+    border-radius: 5px;
+    text-decoration: aliceblue;
+    color: antiquewhite;
+}
+.action1{
+    width: 50%;
+
+}
+/* footer page  */
+
+footer {
+    background-color: #1f2937;
+    height: 40px;
+    justify-items: center;
+}
+footer p {
+    font-size: larger;
+    margin-top: px;
+    color: beige;
+}
