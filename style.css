@@ -6,6 +6,7 @@ body {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  
 }
 /* header nav and logo section */
 header {
@@ -42,7 +43,12 @@ header {
 }
 .home {
     text-align: center;
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 1rem;
+    flex: 1 1 300px
+    
 }
 .home p{
     justify-content: center;
@@ -59,18 +65,20 @@ header {
     border-radius: 30px;
     width: 100rem;  
 }
-img{
-  height: 20px;
-}
+
 button{
-  height: 30px;
-  width: 120px;
-  background-color: #da8044;
-  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 16px;
+  background: #ff7a1a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 .nav {
     display: flex;
-    flex: 1 1 300px; /* min width 300px, grows if space allows */
+    flex: 1 1 250px; /* min width 300px, grows if space allows */
     flex-direction: row;
     justify-content: flex-end;
     margin:10px  10px;
@@ -115,21 +123,11 @@ span{
     text-align: justify;
 }
 
-/* random information page  */
-.main1 {
-    display: flex;
-    flex-direction:column;
-    padding: 20px;
-    margin: 20px;
-    align-items: center;
-
-}
-
 
 
 img {
-    height: 30rem;
-    
+    height: 25rem;
+    flex: 1 1 300px;
     border: 12px solid #1f2937;
     border-radius: 20px;
    
@@ -141,14 +139,27 @@ img {
 
 footer {
     background-color: #1f2937;
-    height: 3rem;
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  
     
 }
 footer p {
     font-size: larger;
     margin: 1rem;
-    color: bisque;
+    color: wheat;
     text-align: center;
+}
+
+.socials span{
+  display: flex;
+  margin: 10px;
+  gap: 10px;
 }
 .fa {
   padding: 20px;
@@ -159,15 +170,60 @@ footer p {
   border-radius: 50%;
   background-color: aliceblue;
 }
+
+form {
+  display: flex;
+  flex-direction:column;
+  flex: 1 1 300px ;
+  justify-content: space-around;
+  margin: 10px;
+  text-decoration: none;
+  padding: 0rem;
+    
+  
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  padding: 12px;
+  row-gap: 10px;
+}
+h4 {
+  font-size: larger;
+    margin: 1rem;
+    color: wheat;
+    text-align: justify;
+}
+
+input{
+  height: 30px;
+  border-radius: 5px;
+  background: #1f2937;
+}
+
 /* Default (mobile first) */
 body {
   font-size: 16px;
+}
+
+@media (min-width: 360px) {
+  body {
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+     padding: 0rem;
+  }
 }
 
 /* Tablet */
 @media (min-width: 768px) {
   body {
     font-size: 18px;
+  }
+  form{
+    flex-direction:row;
   }
 }
 
@@ -176,27 +232,50 @@ body {
   body {
     font-size: 20px;
   }
+  form{
+    flex-direction:row;
+  }
 }
 
-/* contact info*/
-.contact {
-  display: flex;
-  flex-direction:row;
-  flex: 1 1 300px ;
-  justify-content: space-around;
-  margin: 10px;
-}
+ /* Hidden by default */
+   
+    h2 {
+      color: #da8044;
+    }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  width: 15rem;
-  padding: 12px;
-}
+    form {
+      margin-bottom: 20px;
+    }
 
-input{
-  height: 30px;
-  margin: 10px;
-  border-radius: 5px;
-  background: #1f2937;
-}
+    input, textarea{
+      width: 100%;
+      max-width: 500px;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    input, textarea {
+      background: #1c1c1c;
+      color: #fff;
+    }
+
+
+    #comments {
+      margin-top: 30px;
+      max-width: 600px;
+    }
+
+    .comment-box {
+      background: #1c1c1c;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .comment-box strong {
+      color: #da8044;
+    }

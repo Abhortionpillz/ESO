@@ -6,6 +6,7 @@
     <title>EMEDIONG'S PORTFOLIO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./project/project.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +19,7 @@
         <div class="nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
+            <a href="./resume/resume.html">Resume</a>
         </div>
     </div>
     </header>
@@ -29,12 +29,22 @@
         <img src="my.png" alt="error loading photo">
         <h1> Hi, I'm Emediong Solomon Offiong</h1>
         <p>Frontend Developer| Web3 Enthusiat| Airdrop Hunter| Virtual Assistant</p>
-        <a href="" target="_blank">
-  <button class="btn">See My Works</button>
-</a>
+    
+  <!-- Button to open popup -->
+<button class="open-btn" onclick="openPopup()">See My Work</button>
 
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+  <!-- Popup box with iframe -->
+  <div class="popup" id="popup">
+    <button class="close-btn" onclick="closePopup()">X</button>
+    <iframe src="./project/project.html"></iframe> <!-- 👈 Replace with your webpage link -->
+  </div>
     </div>
     
+  
+
     <!-- About Section -->
     <div class="about" id="about">
     <h2>About Me</h2>
@@ -58,45 +68,37 @@
     </p>
     </div>
     
-    <div class="contact">
-            <div class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="6" required></textarea>
-      <button type="submit">Send Message</button>
+    <form class="contact">
+  <main onsubmit="addComment(event)">
+           <h2>Leave a Comment</h2>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Post Comment</button>
+
+      <div id="comments">
+    <h3>Comments:</h3>
+  </div>
+  </main>
+
+     
             </div>
         <div class="socials">
             <h4>follow me on social media </h4>
-            <a href=""class="fa fa-facebook"></a>
-            <a href=""class="fa fa-twitter"></a>
-            <a href=""class="fa fa-linkedin"></a>
-            <a href=""class="fa fa-instagram"></a>
-            <a href=""class="fa fa-whatsapp"></a>
-            <a href=""class="fa fa-telegram"></a>
-            <a href=""class="fa fa-youtube"></a>
+            <span>
+            <a href="https://www.facebook.com/abhortionpillz"class="fa fa-facebook" target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://x.com/official_eme50?t=MX8fSSS2PPcY1NPKnLgnwQ&s=09"class="fa fa-twitter" target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://www.linkedin.com/in/emediongsoffiong?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
+            </span>
+
+            <span>
+            <a href="https://www.instagram.com/abhortionpillz?igsh=ZXE0Ymt3dTk0OWU="class="fa fa-instagram" target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://www.tiktok.com/@abhortionpillz?_t=ZM-8zXTz4PmJEu&_r=1"class="fa fa-telegram" target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://youtube.com/@emediongoffiong7915?si=mey1eezuIbhHtNP0"class="fa fa-youtube" target="_blank" rel="noopener noreferrer"></a>
+            </span>
         </div>
-    </div>
-    <script>
-    document.getElementById("whatsappForm").addEventListener("submit", function(e){
-      e.preventDefault();
-
-      // Collect values
-      let name = document.getElementById("name").value;
-      let email = document.getElementById("email").value;
-      let message = document.getElementById("message").value;
-
-      // Your WhatsApp number (include country code, no + or spaces)
-      let phoneNumber = "2349021882188"; // 👈 replace with your real number
-
-      // Encode message for URL
-      let whatsappMessage = `Hello, my name is ${name}.%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
-
-      // WhatsApp API link
-      let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-
-      // Open in new tab (works on both mobile & desktop)
-      window.open(whatsappURL, "_https://web.whatsapp.com/#");
-    });
+    </form>
+    <script src="script.js">
+  
   </script>
 
 </body>
