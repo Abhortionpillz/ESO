@@ -55,6 +55,7 @@ header {
     min-width: 200px;
     text-align: center;
     font-weight: bold;
+    
 }
 .home a {
     text-decoration: none;
@@ -206,6 +207,39 @@ input{
 /* Default (mobile first) */
 body {
   font-size: 16px;
+}
+.home h1{
+  width: 30ch;
+  text-wrap: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(50) infinite alternate-reverse;
+}
+.home span::after{
+  content: "Frontend Developer";
+  animation: words 8s infinite;
+}
+@keyframes words{
+  0%, 25%{
+    content: "Frontend Developer";
+    color: #ff7a1a;
+  }
+    26%, 50%{
+    content: "Web3 Enthusiat";
+    color:green;
+  }
+    51%, 75%{
+    content: "Airdrop Hunter";
+    color: rebeccapurple;
+  }
+    76%, 100%{
+    content: "Virtual Assistant";
+    color:yellowgreen;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
 }
 
 @media (min-width: 360px) {
