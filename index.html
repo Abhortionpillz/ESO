@@ -7,102 +7,478 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./project/project.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=smart_toy" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
-
 </head>
-<header>
-    <div class="header" id="header">
-        <div><h1>ESO</h1></div>
-        <div class="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="./resume/resume.html">Resume</a>
+      
+<body>
+
+  <!-- ─── LOADER ─── -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <div class="loader-logo"><span class="gradient-text">ESO</span></div>
+    <div class="loader-bar-track">
+      <div class="loader-bar-fill"></div>
+    </div>
+    <p class="loader-text">Loading portfolio…</p>
+  </div>
+
+  <!-- ─── NAVBAR ─── -->
+  <header id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="gradient-text">ESO</span><span style="color:var(--fg-faint)">.</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark/light mode">
+          <span id="theme-icon">☀</span>
+        </button>
+        <button class="icon-btn hamburger" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span id="menu-icon">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section id="hero" aria-label="Introduction">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb-2" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge">
+            <span class="dot" aria-hidden="true"></span>
+            Available for hire · Remote-friendly
+          </span>
         </div>
-    </div>
-    </header>
-    <body>
+      
+        <h1 class="hero-name">
+          <span class="line">Emediong</span>
+          <span class="line">Solomon</span>
+          <span class="line line-last gradient-text">Offiong</span>
+        </h1>
 
-    <div class="home" id="home">
-        <img src="my.png" alt="error loading photo">
-        <h1> Hi, I'm Emediong Solomon Offiong.</h1>
-        <p> I'M A <span></span> </p>
-    
-  <!-- Button to open popup -->
-<button class="open-btn" onclick="openPopup()">See My Work</button>
+        <div class="hero-typewriter" aria-live="polite" aria-atomic="true">
+          <span style="color:var(--fg-faint);font-family:var(--font-mono)">&lt;</span>
+          <span class="typewriter-inner" id="typewriter-text"></span>
+          <span class="cursor" aria-hidden="true">|</span>
+          <span style="color:var(--fg-faint);font-family:var(--font-mono)">/&gt;</span>
+        </div>
 
-  <!-- Overlay -->
-  <div class="overlay" id="overlay" onclick="closePopup()"></div>
+        <p class="hero-tagline">
+          I build <strong>responsive web experiences</strong> and optimize
+          workflows using <strong>modern tools and AI</strong>.
+        </p>
 
-  <!-- Popup box with iframe -->
-  <div class="popup" id="popup">
-    <button class="close-btn" onclick="closePopup()">X</button>
-    <iframe src="./project/project.html"></iframe> <!-- 👈 Replace with your webpage link -->
-  </div>
-    </div>
-    
-  
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
 
-    <!-- About Section -->
-    <div class="about" id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a <span >Frontend Developer</span>, 
-      <span >Web3 Enthusiast</span>, 
-      <span >Airdrop Hunter</span>, 
-      and <span>Virtual Assistant</span> passionate about technology and digital innovation.  
-    </p>
-    <p>
-      With a solid foundation in <strong>HTML, CSS, and JavaScript</strong>, 
-      I create responsive and user-friendly web applications. My curiosity about the 
-      <strong>Web3 space</strong> drives me to explore decentralized technologies, 
-      track airdrops, and engage with blockchain communities.  
-    </p>
-    <p>
-      Beyond coding, I use my organizational and communication skills as a Virtual Assistant, 
-      helping businesses and individuals stay productive. I’m constantly learning, 
-      adapting, and building solutions at the intersection of 
-      <strong>technology and innovation</strong>.
-    </p>
-    </div>
-    
-    <form class="contact">
-  <main onsubmit="addComment(event)">
-           <h2>Leave a Comment</h2>
-    <input type="text" id="name" placeholder="Your Name" required>
-    <textarea id="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Post Comment</button>
+      <div class="scroll-cue" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
 
-      <div id="comments">
-    <h3>Comments:</h3>
-  </div>
+    <!-- ─── ABOUT ─── -->
+    <section id="about" class="section reveal" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="eyebrow">About me</span>
+            <h2 id="about-heading" class="section-title">Developer.<br>Assistant.<br>Problem Solver.</h2>
+
+            <p>I'm <strong>Emediong Solomon Offiong</strong> — a self-driven web developer and virtual assistant passionate about building clean, functional digital experiences.</p>
+            <p>With hands-on experience in frontend development and remote work tools, I bridge the gap between technical execution and operational efficiency. Whether it's crafting a responsive landing page or optimizing a business workflow, I bring clarity, speed, and quality to every project.</p>
+            <p>I'm constantly exploring how AI tools can amplify human productivity — particularly through prompt engineering and automation, integrating intelligent workflows into everyday business processes.</p>
+
+            <div class="about-stats">
+              <div class="stat">
+                <div class="stat-value gradient-text">5+</div>
+                <div class="stat-label">Years experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value gradient-text">20+</div>
+                <div class="stat-label">Projects delivered</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value gradient-text">100%</div>
+                <div class="stat-label">Remote capable</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-cards">
+            <div class="highlight-card">
+              <div class="highlight-icon" aria-hidden="true">💻</div>
+              <div>
+                <div class="highlight-label">Frontend Development</div>
+                <div class="highlight-desc">Building pixel-perfect, responsive interfaces using React, Next.js, and Tailwind CSS — with strong attention to accessibility and performance.</div>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon" aria-hidden="true">🤝</div>
+              <div>
+                <div class="highlight-label">Virtual Assistance</div>
+                <div class="highlight-desc">Streamlining operations, managing communications, and handling admin tasks with precision and speed to keep businesses running smoothly.</div>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-icon" aria-hidden="true">🧠</div>
+              <div>
+                <div class="highlight-label">AI Prompt Engineering</div>
+                <div class="highlight-desc">Leveraging ChatGPT and AI tools to automate workflows, generate content, and solve problems — turning AI into a practical business asset.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ─── -->
+    <section id="skills" class="section section--alt reveal" aria-labelledby="skills-heading">
+      <div class="container">
+        <span class="eyebrow">Expertise</span>
+        <h2 id="skills-heading" class="section-title">Skills & Toolbox</h2>
+        <p class="section-subtitle">A curated set of tools and technologies I work with daily to build great products.</p>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-card-emoji" aria-hidden="true">🎨</span>
+              <span class="skill-card-label">Frontend</span>
+            </div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">HTML5</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">CSS3</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">JavaScript</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill" data-width="85"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">React.js</span><span class="skill-pct">82%</span></div><div class="skill-track"><div class="skill-fill" data-width="82"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Tailwind CSS</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
+          </div>
+
+          <!-- Dev Tools -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-card-emoji" aria-hidden="true">🛠</span>
+              <span class="skill-card-label">Dev Tools</span>
+            </div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Git</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill" data-width="80"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">GitHub</span><span class="skill-pct">82%</span></div><div class="skill-track"><div class="skill-fill" data-width="82"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">VS Code</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill" data-width="92"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">npm / Yarn</span><span class="skill-pct">78%</span></div><div class="skill-track"><div class="skill-fill" data-width="78"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Figma (basic)</span><span class="skill-pct">65%</span></div><div class="skill-track"><div class="skill-fill" data-width="65"></div></div></div>
+          </div>
+
+          <!-- AI & Productivity -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-card-emoji" aria-hidden="true">🤖</span>
+              <span class="skill-card-label">AI & Productivity</span>
+            </div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">ChatGPT</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill" data-width="92"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Prompt Engineering</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Notion</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill" data-width="85"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Google Workspace</span><span class="skill-pct">87%</span></div><div class="skill-track"><div class="skill-fill" data-width="87"></div></div></div>
+            <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Slack / Trello</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill" data-width="80"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-tags">
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Framer Motion</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Responsive Design</span>
+          <span class="skill-tag">SEO Basics</span>
+          <span class="skill-tag">Email Automation</span>
+          <span class="skill-tag">Data Entry</span>
+          <span class="skill-tag">Scheduling</span>
+          <span class="skill-tag">Content Writing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ─── -->
+    <section id="projects" class="section reveal" aria-labelledby="projects-heading">
+      <div class="container">
+        <span class="eyebrow">Selected Work</span>
+        <h2 id="projects-heading" class="section-title">Projects I've Built</h2>
+        <p class="section-subtitle">A handful of projects showcasing my frontend capabilities and attention to craft.</p>
+
+        <div class="projects-list">
+
+          <!-- Project 1 -->
+          <article class="project-card" aria-label="Project: Portfolio Website">
+            <span class="project-number" aria-hidden="true">01</span>
+            <div>
+              <span class="featured-badge">Featured</span>
+              <h3 class="project-title">Portfolio Website</h3>
+              <p class="project-desc">A modern, performance-optimized personal portfolio built with Next.js 14 and Framer Motion. Features dark/light mode, smooth animations, SEO optimization, and a clean editorial design system.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Framer Motion</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="Live demo for Portfolio Website">
+                  Live Demo ↗
+                </a>
+                <a href="#" class="project-link-secondary" aria-label="GitHub source for Portfolio Website">
+                  &#9671; Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" aria-label="Project: Startup Landing Page">
+            <span class="project-number" aria-hidden="true">02</span>
+            <div>
+              <h3 class="project-title">Startup Landing Page</h3>
+              <p class="project-desc">A high-conversion SaaS landing page with animated hero, feature highlights, pricing section, and testimonials. Optimized for PageSpeed with a 95+ Lighthouse score.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Framer Motion</span>
+                <span class="tech-tag">Vite</span>
+              </div>
+              <div class="project-links">
+                <a href="https://taskrah.vercel.app/" target="_blank" class="project-link" aria-label="Live demo for Startup Landing Page">Live Demo ↗</a>
+                <a href="#" class="project-link-secondary" aria-label="GitHub source for Startup Landing Page">&#9671; Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" aria-label="Project: E-Commerce Admin Dashboard">
+            <span class="project-number" aria-hidden="true">03</span>
+            <div>
+              <h3 class="project-title">E-Commerce Admin Dashboard</h3>
+              <p class="project-desc">A full-featured admin dashboard with revenue analytics, order management, inventory tracking, and customer insights. Responsive and data-rich with interactive charts.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Recharts</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Context API</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="Live demo for Admin Dashboard">Live Demo ↗</a>
+                <a href="#" class="project-link-secondary" aria-label="GitHub source for Admin Dashboard">&#9671; Source Code</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── EXPERIENCE ─── -->
+    <section id="experience" class="section section--alt reveal" aria-labelledby="experience-heading">
+      <div class="container">
+        <span class="eyebrow">Career</span>
+        <h2 id="experience-heading" class="section-title">Work Experience</h2>
+        <p class="section-subtitle">A journey through roles that shaped my operational and technical skill set.</p>
+
+        <div class="timeline" role="list">
+
+          <div class="timeline-item current" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">💼</div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <span class="timeline-title">Online Operator / Web Developer & VA</span>
+                  <span class="active-chip"><span class="dot" aria-hidden="true"></span> Active</span>
+                </div>
+                <span class="timeline-period">2022 – Present</span>
+              </div>
+              <div class="timeline-company">Freelance & Remote Clients</div>
+              <div class="timeline-bullets">
+                <div class="timeline-bullet">Building responsive websites and landing pages for clients using React and Tailwind CSS.</div>
+                <div class="timeline-bullet">Providing virtual assistant services: scheduling, email management, research, and admin support.</div>
+                <div class="timeline-bullet">Leveraging AI tools and prompt engineering to automate workflows and boost client productivity.</div>
+                <div class="timeline-bullet">Managing social media presence and content calendars for small businesses.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">🏢</div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <span class="timeline-title">Branch Manager</span>
+                <span class="timeline-period">2020 – 2022</span>
+              </div>
+              <div class="timeline-company">Telecom / Financial Services</div>
+              <div class="timeline-bullets">
+                <div class="timeline-bullet">Managed day-to-day branch operations including staff supervision and customer relations.</div>
+                <div class="timeline-bullet">Oversaw financial reconciliations, SIM registration, and digital onboarding processes.</div>
+                <div class="timeline-bullet">Trained new team members on operational procedures and compliance standards.</div>
+                <div class="timeline-bullet">Consistently exceeded monthly performance targets by 20–30%.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">📋</div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <span class="timeline-title">SIM Card Registrar</span>
+                <span class="timeline-period">2019 – 2020</span>
+              </div>
+              <div class="timeline-company">Telecom Agency</div>
+              <div class="timeline-bullets">
+                <div class="timeline-bullet">Registered and verified customer SIM cards in compliance with national regulations.</div>
+                <div class="timeline-bullet">Maintained accurate digital and physical records for daily audit reporting.</div>
+                <div class="timeline-bullet">Provided frontline customer service across walk-in and field registration scenarios.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section id="contact" class="section reveal" aria-labelledby="contact-heading">
+      <div class="container">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 id="contact-heading" class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Have a project in mind or need a virtual assistant? I'd love to hear from you.</p>
+
+        <div class="contact-grid">
+
+          <!-- Left: Info -->
+          <div class="contact-info">
+            <a href="mailto:emediong@example.com" class="contact-item" aria-label="Email: emediong@example.com">
+              <div class="contact-icon" aria-hidden="true">✉</div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">emediongffiong50@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+2348000000000" class="contact-item" aria-label="Phone: +234 800 000 0000">
+              <div class="contact-icon" aria-hidden="true">📞</div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">+234 902 188 2188</div>
+              </div>
+            </a>
+
+            <div class="contact-divider" role="separator"></div>
+
+            <div class="social-row">
+              <p style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-faint);padding:0 10px;">Find me online</p>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-item" aria-label="GitHub profile">
+                <div class="social-icon" aria-hidden="true">⌨</div>
+                <span class="social-handle">@emediong-dev</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-item" aria-label="LinkedIn profile">
+                <div class="social-icon" aria-hidden="true">🔗</div>
+                <span class="social-handle">in/emediong-offiong</span>
+              </a>
+            </div>
+
+            <div class="avail-box">
+              <div class="avail-head">
+                <div class="avail-dot" aria-hidden="true"></div>
+                Currently Available
+              </div>
+              <p class="avail-text">Open to freelance projects, remote positions, and contract virtual assistant roles.</p>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div>
+            <div class="contact-form" id="contact-form" role="form" aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="form-name">Name</label>
+                  <input class="form-input" type="text" id="form-name" placeholder="John Doe" autocomplete="name" />
+                  <span class="form-error" id="error-name" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="form-email">Email</label>
+                  <input class="form-input" type="email" id="form-email" placeholder="john@example.com" autocomplete="email" />
+                  <span class="form-error" id="error-email" role="alert"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="form-message">Message</label>
+                <textarea class="form-textarea" id="form-message" placeholder="Tell me about your project or how I can help…"></textarea>
+                <span class="form-error" id="error-message" role="alert"></span>
+              </div>
+              <div class="form-submit">
+                <button class="btn btn-primary" id="form-submit" type="button" style="width:100%;justify-content:center;" aria-label="Send message">
+                  Send Message ↗
+                </button>
+              </div>
+            </div>
+
+            <div class="success-box" id="success-box" role="status" aria-live="polite">
+              <div class="success-icon" aria-hidden="true">✅</div>
+              <div class="success-title">Message Sent!</div>
+              <p class="success-text">Thanks for reaching out. I'll get back to you within 24 hours.</p>
+              <button class="btn btn-outline" onclick="resetForm()" aria-label="Send another message">Send Another</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-     
-            </div>
-        <div class="socials">
-            <h4>follow me on social media </h4>
-            <span>
+  <!-- ─── FOOTER ─── -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-name gradient-text">Emediong Solomon Offiong</div>
+          <div class="footer-copy">© <span id="footer-year"></span> · Web Developer & Virtual Assistant</div>
+        </div>
+        <div class="footer-socials">
             <a href="https://www.facebook.com/abhortionpillz"class="fa fa-facebook" target="_blank" rel="noopener noreferrer"></a>
             <a href="https://x.com/official_eme50?t=MX8fSSS2PPcY1NPKnLgnwQ&s=09"class="fa fa-twitter" target="_blank" rel="noopener noreferrer"></a>
             <a href="https://www.linkedin.com/in/emediongsoffiong?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
-            </span>
-
-            <span>
             <a href="https://www.instagram.com/abhortionpillz?igsh=ZXE0Ymt3dTk0OWU="class="fa fa-instagram" target="_blank" rel="noopener noreferrer"></a>
             <a href="https://www.tiktok.com/@abhortionpillz?_t=ZM-8zXTz4PmJEu&_r=1"class="fa fa-telegram" target="_blank" rel="noopener noreferrer"></a>
             <a href="https://youtube.com/@emediongoffiong7915?si=mey1eezuIbhHtNP0"class="fa fa-youtube" target="_blank" rel="noopener noreferrer"></a>
-            </span>
-        </div>
-    </form>
-    <script src="script.js">
-  
-  </script>
+            
+        </div>        
+        <p class="footer-meta">Built with HTML · CSS · JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── SCRIPTS ─── -->
+  <script src="script.js"></script>
 
 </body>
-<footer>
-  <p>developed by emediong offiong 2025</p>
-</footer>
 </html>
